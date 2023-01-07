@@ -10,5 +10,5 @@ Tech Stack:
 - [x] Users
     - [ ] Login
     - [x] Registration
-    - <img src="snipp/Signup.png">
-    
+    - <img src="snipp/Signup.png" height="250px">
+
