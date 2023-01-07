@@ -1,0 +1,16 @@
+.btn {
+    padding:1% 5%;
+    font-size:18px;
+    width:22.5%;
+    margin:1% 0;
+    background-color: #229587;
+    border:none;
+    color:white;
+    font-weight: bold;
+}
+
+.btn:hover {
+    transform: scale(1.02) translateY(-2px);
+    box-shadow: 3px 3px 6px #38373785;
+    transition: .5s;
+}
