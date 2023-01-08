@@ -12,7 +12,14 @@ Tech Stack:
 ## Features
 
 - [x] Users
-    - [ ] Login
+    - [x] Login
+      <img src="snipp/Signup.png" height="250px">
+
     - [x] Registration
-    - <img src="snipp/Signup.png" height="250px">
+      <img src="snipp/Signup.png" height="250px">
+
+    - [ ] Buyer Screen
+    - [ ] Seller Screen  
+
+
 
