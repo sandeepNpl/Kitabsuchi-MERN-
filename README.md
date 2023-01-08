@@ -13,10 +13,10 @@ Tech Stack:
 
 - [x] Users
     - [x] Login
-      <img src="snipp/Signup.png" height="250px">
+      <img src="snipp/Login.png" height="250px" width="200px">
 
     - [x] Registration
-      <img src="snipp/Signup.png" height="250px">
+      <img src="snipp/Signup.png" height="250px" width="200px">
 
     - [ ] Buyer Screen
     - [ ] Seller Screen  
