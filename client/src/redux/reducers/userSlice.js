@@ -1,5 +1,5 @@
 import {
-    ADD_USER_DETAILS, LOGOUT_RESET_DETAILS,
+    ADD_USER_DETAILS, REMOVE_USER_DETAILS,
   } from "../actionTypes/actionTypes";
   
   const initialState = {
@@ -18,7 +18,7 @@ import {
           name,
           email,
         };
-      case LOGOUT_RESET_DETAILS:
+      case REMOVE_USER_DETAILS:
           return{
               ...state,
               role:"",

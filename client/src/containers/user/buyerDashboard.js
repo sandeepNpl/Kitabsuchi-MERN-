@@ -1,16 +1,16 @@
 import React from 'react'
 import {useDispatch} from 'react-redux'
-import {logoutresetDetails} from '../../redux/actions/userAction'
+import {logoutResetDetails} from '../../redux/actions/userAction'
 
 const BuyerDashboard = () => {
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
   const triggerLogout = () =>{
-    dispatch(logoutresetDetails)
+    dispatch(logoutResetDetails())
   }
   return (
     <div>
       I am the buyer dashboard
-      <button onClick={triggerLogout()}>Log out</button>
+      <button onClick={() => triggerLogout()}>Log out</button>
     </div>
   )
 }

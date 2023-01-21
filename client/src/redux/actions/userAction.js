@@ -1,5 +1,5 @@
 import {
-    ADD_USER_DETAILS,LOGOUT_RESET_DETAILS
+    ADD_USER_DETAILS,REMOVE_USER_DETAILS
   } from "../actionTypes/actionTypes";
   
   export const addUserDetails = (userDetails) => (dispatch) => {
@@ -10,10 +10,9 @@ import {
   };
 
 
- export  const logoutresetDetails = (userDetails) => (dispatch) =>{
+ export  const logoutResetDetails = () => (dispatch) =>{
     dispatch({
-      type: LOGOUT_RESET_DETAILS,
-      payload: userDetails,
+      type: REMOVE_USER_DETAILS,
     })
   }
 
