@@ -14,3 +14,13 @@
     box-shadow: 3px 3px 6px #38373785;
     transition: .5s;
 }
+
+
+@media only screen and (max-width: 600px) {
+    .btn {
+        padding:5% 20%;
+        font-size:17px;
+        width:80%;
+        margin:4% 0;
+    }
+}

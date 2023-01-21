@@ -1,6 +1,6 @@
 import React from "react";
-import { Formik, Form, Field } from "formik";
-import { Link } from "react-router-dom";
+import { Formik, Form, Field, ErrorMessage } from "formik";
+import { Link, useNavigate } from "react-router-dom";
 import * as Yup from "yup";
 import "../../assets/styles/style.css";
 import Button from "../../components/Button";
@@ -23,7 +23,9 @@ const SignupSchema = Yup.object().shape({
 });
 
 const Register = () => {
-  function getStyles(errors) {
+  const navigate = useNavigate();
+
+  const  getStyles =(errors) => {
     if (errors.firstName) {
       return {
         border: "1px solid red",
@@ -44,10 +46,30 @@ const Register = () => {
             confirmPassword: "",
           }}
           validationSchema={SignupSchema}
-          onSubmit={(values) => {
+            onSubmit={async(values, { resetForm }) => {
+                const {confirmPassword, ...updatedValues} = values
+                const requestOptions = {
+                  method: "POST",
+                  headers: { "Content-Type": "application/json" },
+                  body: JSON.stringify(updatedValues),
+                };
+                try {
+                  const response = await fetch("http://localhost:3001/register", requestOptions)
+                  const data = await response.json()
+                 
+                  if(response.status === 409 && data.error){
+                    // <div>{data.error}</div>
+                    alert(data.error)
+                  }else if(response.status === 200){
+                    // alert(data.msg)
+                    navigate("/");
+                  }
+                  resetForm({ values: "" });
+                } catch (err) {
+                  alert(err);
+                }
+              }}
             // same shape as initial values
-            console.log(values);
-          }}
         >
           {({ errors, touched }) => (
             <Form className="form">

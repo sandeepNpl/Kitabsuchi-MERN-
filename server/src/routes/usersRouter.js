@@ -26,36 +26,38 @@ router.post("/register", async (req, res) => {
   }
 });
 
-// router.post("/login", async (req, res) => {
-//   const user = await Users.findOne({email: req.body.email}).lean()
-//   if(user){
-//     try{
-//     const {email,password} = user;
-//     const isMatched= bcrypt.compareSync(req.body.password, password)
-//     if(email && isMatched){
-//       const {password, ...refactoredUserObj} = user
-//       res.status(200).json({
-//         msg:"logged in successfully",
-//         userData: refactoredUserObj
-//       })
-//     }
-//     else{
-//       res.status(401).json({
-//         error:"unauthorized user"
-//       })
-//     }
-//     }
-//     catch(err){
-//       console.log(err)
-//     }
-//     }
-//     else{
-//       res.json({
-//         msg:"user doesn't exist"
-//       })
-//     }
+router.post("/login", async (req, res) => {
+  const user = await Users.findOne({email: req.body.email}).lean()
+  if(user){
+    try{
+    const {email,password} = user;
+    const isMatched= bcrypt.compareSync(req.body.password, password)
+    if(email && isMatched){
+      const {password, ...refactoredUserObj} = user
+      res.status(200).json({
+        msg:"logged in successfully",
+        userData: refactoredUserObj
+      })
+    }
+    else{
+      res.status(401).json({
+        error:"unauthorized user"
+      })
+    }
+    }
+    catch(err){
+      console.log(err)
+    }
+    }
+    else{
+      res.json({
+        msg:"user doesn't exist"
+      })
+    }
+console.log(req.body);
+console.log(user)
 
-// });
+});
 
 
 module.exports = router;
