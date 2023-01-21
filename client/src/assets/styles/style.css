@@ -1,4 +1,29 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Merienda+One&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+}
+
+/* CSS for Nav Bar */
+.navbar{
+    background-color:#fcfcfc;
+    padding:1%;
+}
+
+/* CSS for logo */
+.kitabsuchitext{
+    color:#1b5e20;
+    font-family: 'Merienda One', cursive;
+    font-size:40px;
+    margin:2%;
+}
+
+
+
+
+
 .form-box{
     text-align: center;
     padding:0;
@@ -28,7 +53,42 @@
     
 }
 .form-box .errorStyle{
-   color:rgb(247, 74, 74);
+   color:#ea6868;
    text-align:justify;
    margin-left:540px;
 }
+
+/* FOR RESPONSIVE */
+@media only screen and (max-width: 600px) {
+    .field{
+        padding:7% 2%;
+        font-size:18px;
+        width:75%;
+        margin:3% 0;
+        
+    }
+    .form-box .errorStyle{
+        color:rgb(247, 74, 74);
+        text-align:justify;
+        margin-left:38px;
+     }
+
+     .accType{
+        width:80%;
+        padding:6% 2%;
+        margin:3% 0;
+      
+    }
+}
+
+/* * Small devices (portrait tablets and large phones, 600px and up) */ 
+@media only screen and (min-width: 600px) {}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {}
