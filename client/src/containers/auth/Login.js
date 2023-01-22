@@ -98,13 +98,13 @@ const Login = () => {
                   {errors.password && touched.password ? (
                     <div style={errorStyle}>{errors.password}</div>
                   ) : null}
-                <Button type="submit" variant="contained" color="success" fullWidth style={buttonStyle}>SIGN IN</Button>
+                <Button type="submit" variant="contained" color="success" fullWidth style={buttonStyle}>LOG IN</Button>
               </Form>
             )}
           </Formik>
         <Typography>
           Do you have an account?
-          <Link to="/register">Sign Up</Link>
+          <Link to="/register">Register</Link>
         </Typography>
       </Paper>
     </Grid>
