@@ -1,18 +1,23 @@
-import React from 'react'
-import {useDispatch} from 'react-redux'
-import {logoutResetDetails} from '../../redux/actions/userAction'
+import React from "react";
+import { useDispatch } from "react-redux";
+import Logout from "../../components/logout";
+import Avatar from "../../components/avatar";
+import Navbar from "../../components/navbar";
+import "../../assets/styles/style.css";
+import {useSelector}  from 'react-redux'
 
 const BuyerDashboard = () => {
-  const dispatch = useDispatch();
-  const triggerLogout = () =>{
-    dispatch(logoutResetDetails())
-  }
+  const {email} = useSelector(state=>state.user)
+  const name = email.split('@')
   return (
-    <div>
-      I am the buyer dashboard
-      <button onClick={() => triggerLogout()}>Log out</button>
+    <div className="header">
+      <Navbar />
+      <div className="avatarBox">
+        <Avatar />
+        Hii <b>{name[0]}...!</b>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default BuyerDashboard
+export default BuyerDashboard;

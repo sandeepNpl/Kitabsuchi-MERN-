@@ -16,10 +16,22 @@
 .kitabsuchitext{
     color:#1b5e20;
     font-family: 'Merienda One', cursive;
-    font-size:40px;
+    font-size:30px;
     margin:2%;
 }
 
+.header{
+   display: flex;
+   justify-content:space-between;
+}
+
+.avatarBox{
+    margin:20px;
+}
+
+.dropdownList{
+    background-color: red;
+}
 
 
 

@@ -17,6 +17,7 @@ import {
           role,
           name,
           email,
+          name,
         };
       case REMOVE_USER_DETAILS:
           return{
@@ -24,6 +25,7 @@ import {
               role:"",
               name:"",
               email:"",
+              name:"",
           }
       default:
         return state;

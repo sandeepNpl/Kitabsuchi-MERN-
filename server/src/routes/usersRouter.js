@@ -12,14 +12,13 @@ router.post("/register", async (req, res) => {
         req.body.password = hash
         const userData =  Users.create(req.body);
         if (userData) {
-          res.json({ msg: "user is added" });
+          res.status(200).json({ msg: "Register successfully" });
         } else {
           res.json({ msg: "something went worng" });
         }
       } else {
-        res.status(409).json({ error: "user already exists" });
+        res.status(409).json({ msg: "user already exists" });
       }
-    console.log(req.body);
     });
   } catch (err) {
     console.log(err);
@@ -31,17 +30,17 @@ router.post("/login", async (req, res) => {
   if(user){
     try{
     const {email,password} = user;
-    const isMatched= bcrypt.compareSync(req.body.password, password)
+    const isMatched= bcrypt.compareSync(req.body.password, password);
     if(email && isMatched){
       const {password, ...refactoredUserObj} = user
       res.status(200).json({
-        msg:"logged in successfully",
+        msg:"log in successfully",
         userData: refactoredUserObj
       })
     }
     else{
       res.status(401).json({
-        error:"unauthorized user"
+        msg:"Invalid email or password"
       })
     }
     }
@@ -51,13 +50,9 @@ router.post("/login", async (req, res) => {
     }
     else{
       res.json({
-        msg:"user doesn't exist"
+        msg:"user does not exist"
       })
     }
-console.log(req.body);
-console.log(user)
-
 });
-
 
 module.exports = router;
