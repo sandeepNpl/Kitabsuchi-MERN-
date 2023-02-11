@@ -28,7 +28,6 @@ const Avatare = () => {
         items,
     }}
     trigger={['click']}
-    
   >
       <Space >
         <Avatar icon={<UserOutlined />} />
@@ -36,8 +35,6 @@ const Avatare = () => {
       </Space>
   </Dropdown>
 
-
-   
     </>
   )
 }
