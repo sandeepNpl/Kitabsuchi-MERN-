@@ -33,9 +33,6 @@
     background-color: red;
 }
 
-
-
-
 .form-box{
     text-align: center;
     padding:0;
@@ -69,6 +66,10 @@
    text-align:justify;
    margin-left:540px;
 }
+
+
+
+
 
 /* FOR RESPONSIVE */
 @media only screen and (max-width: 600px) {
