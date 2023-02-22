@@ -7,7 +7,6 @@ const adminDashboard = () => {
     <div>
     <Logout/>
     <Modal/>
-
     </div>
   )
 }
