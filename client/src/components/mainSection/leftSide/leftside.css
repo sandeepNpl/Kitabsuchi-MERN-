@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+
+.left-side-container{
+    width:100%;
+}
+.leftSide-hearder{
+    text-transform: capitalize;
+    color:rgb(53, 53, 53);
+    font-size:30px;
+    font-family: 'Noto Serif', serif;
+    letter-spacing: 1.2px;
+    
+}
+.circle-style{
+    background-color: rgb(173, 241, 173);
+    border-radius: 50%;
+    text-align: center;
+}
+.home-description{
+    margin-top: 30px;
+}
+
+
+.left-side-button{
+    margin-top:20px;
+}
+
+.explore-button{
+    padding:8px 15px ;
+    color:white;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 2px;
+    font-size: 17px;
+    font-weight: 700;
+    background-color: #096a2e;
+    border:none;
+    border-radius: 5px;
+}
+
+.getStarted-button{
+    padding:6px 15px;
+    margin-left: 10px;
+    color:white;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 2px;
+    color:#096a2e;
+    font-size: 17px;
+    font-weight: 700;
+    background-color: rgb(255, 255, 255);
+    border: 2px solid #096a2e;
+    border-radius: 5px;
+}

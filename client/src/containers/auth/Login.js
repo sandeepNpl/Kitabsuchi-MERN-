@@ -1,23 +1,21 @@
 
-import React from "react";
+import LockOpenOutlinedIcon from "@mui/icons-material/LockOpenOutlined";
 import {
-  Grid,
+  Button, Grid,
   Paper,
-  TextField,
-  Button,
-  Typography,
+  TextField, Typography
 } from "@mui/material";
 import Avatar from "@mui/material/Avatar";
-import LockOpenOutlinedIcon from "@mui/icons-material/LockOpenOutlined";
-import { Formik, Form ,Field} from "formik";
-import * as Yup from "yup";
-import { addUserDetails } from "../../redux/actions/userAction";
-import {useDispatch} from 'react-redux';
 import { message } from 'antd';
+import { Field, Form, Formik } from "formik";
+import React from "react";
+import { useDispatch } from 'react-redux';
 import { Link } from "react-router-dom";
+import * as Yup from "yup";
 import "../../assets/styles/style.css";
+import { addUserDetails } from "../../redux/actions/userAction";
 // import { padding } from "@mui/system";
-import NavBar from '../../components/navbar'
+import NavBar from '../../components/navbar';
 
 const Login = () => {
   const paperStyle = {

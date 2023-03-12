@@ -1,11 +1,12 @@
 import React from "react";
-import "../assets/styles/style.css";
-import "../assets/images/kitabsuchi.png";
+import logo from "./../assets/images/logo.png"
+
 
 const navBar = () => {
   return (
     <div className="navbar">
-      <span className="kitabsuchitext">KitabSuchi</span>
+      <span className="kitabsuchitext"><img src={logo} width="100px"/></span>
+
     </div>
   );
 };

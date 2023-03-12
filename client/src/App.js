@@ -42,6 +42,7 @@ const BuyerScreen = () => {
   return (
     <Routes>
       <Route path="/" element={<BuyerDashboard />} />
+      <Route path="/login" element={<Login />} />
     </Routes>
   );
 };

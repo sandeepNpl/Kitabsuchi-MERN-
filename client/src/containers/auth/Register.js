@@ -1,14 +1,13 @@
 
-import React from "react";
-import { Grid, Paper, TextField, Button, Typography } from "@mui/material";
-import Avatar from "@mui/material/Avatar";
 import LockOpenOutlinedIcon from "@mui/icons-material/LockOpenOutlined";
-import { Formik, Form, Field } from "formik";
-import { addUserDetails } from "../../redux/actions/userAction";
-import * as Yup from "yup";
+import { Button, Grid, Paper, TextField, Typography } from "@mui/material";
+import Avatar from "@mui/material/Avatar";
 import { message } from "antd";
+import { Field, Form, Formik } from "formik";
+import React from "react";
 import { useDispatch } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
+import * as Yup from "yup";
 import "../../assets/styles/style.css";
 import NavBar from "../../components/navbar";
 
@@ -57,7 +56,9 @@ const Register = () => {
     password: Yup.string()
       .min(6, "6 character minimum")
       .required("Password is required"),
-    confirmPassword: Yup.string().required("Confirm password is required"),
+    confirmPassword: Yup.string().required("Confirm password is required").oneOf(
+      [Yup.ref("password")],
+      "Both password need to be the same")
   });
 
   return (

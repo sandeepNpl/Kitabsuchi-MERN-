@@ -1,0 +1,15 @@
+.navbar-conatainer{
+    width:100%;
+    margin-top: 2%;
+
+}
+.navbar-conatainer ul {
+    list-style: none;
+}
+.navbar-conatainer ul {
+display: flex;
+flex-direction: row;
+}
+.navbar-conatainer ul li{
+    margin: 0 20px ;
+}
