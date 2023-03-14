@@ -18,7 +18,11 @@ Tech Stack:
     - [x] Registration
       <img src="snipp/Signup.png" height="250px" width="200px">
 
-    - [ ] Buyer Screen
+    - [ ] Home Screen
+
+      <img src="snipp/home.jpg" height="300px" width="600px" >
+
+
     - [ ] Seller Screen  
 
 
