@@ -1,0 +1,14 @@
+
+.service-header{
+    text-align: center;
+    margin: 20px 0 ;
+}
+.service-container{
+    display:flex;
+    text-align:center;
+    justify-content:center;
+    padding-bottom: 30%;
+}
+.service-container div{
+    margin: 0 15px ;
+}
